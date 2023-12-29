@@ -1,4 +1,6 @@
 # Implementation of Univariate Linear Regression
+### Name: Anbuselvan.S
+### Reference No: 23005959
 ## Aim:
 To implement univariate Linear Regression to fit a straight line using least squares.
 ## Equipment’s required:
@@ -15,18 +17,34 @@ To implement univariate Linear Regression to fit a straight line using least squ
 6.	Obtain the straight line equation Y=mX+b and plot the scatterplot.
 ## Program
 ```
-
-
-
-
-
-
+# Univariate Linear Regression
+# Develpoed by: Anbuselvan.S
+# Register number: 23005959
+import numpy as np
+import matplotlib.pyplot as plt
+x=np.array([0,1,2,3,4,5,6,7,8,9])
+y=np.array([1,3,2,5,7,8,8,9,10,12])
+plt.scatter(x,y)
+plt.show()
+xmean=np.mean(x)
+ymean=np.mean(y)
+num=0
+den=0
+for i in range(len(x)):
+  num+=(x[i]-xmean)*(y[i]-ymean)
+  den+=(x[i]-xmean)**2
+m=num/den
+b=ymean-m*xmean
+print(m,b)
+ypred=m*x+b
+print(ypred)
+plt.scatter(x,y,color="Red")
+plt.plot(x,ypred,color="Blue")
+plt.show()
 ```
 ## Output
-</br>
-</br>
-</br>
-</br>
+![image](https://github.com/anbuselvan1519/Univariate-Linear-Regression/assets/139841744/dff4f2a3-10f0-4240-9b3a-14b0d364bd15)
+![image](https://github.com/anbuselvan1519/Univariate-Linear-Regression/assets/139841744/4d9bd2c1-92bb-434e-a782-ff6dc6118805)
 
 ## Result
 Thus the univariate Linear Regression was implemented to fit a straight line using least squares.
